@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- css font family -->
+<link rel="icon" href="/assets/images/logo.jpg">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+<!-- css start -->
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+#regForm {
+  background-color: skyblue;
+  margin: 8px auto;
+  font-family: Raleway;
+  padding: 40px;
+  width: 60%;
+  min-width: 300px;
+  height: 600px;
+}
+
+h1 {
+  text-align: center; 
+  margin-top:-12px; 
+}
+
+input {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa; 
+}
+input.invalid {
+    
+  background-color: #ffdddd;
+}
+.tab {
+  display: none;
+  
+}
+
+button {
+  background-color: #04AA6D;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-family: Raleway;
+  cursor: pointer;
+}
+img{
+  height: 140px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#prevBtn {
+  background-color: #bbbbbb;
+}
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;                                  
+  background-color: #bbbbbb;
+  border: none;  
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+.step.finish {
+  background-color: #04AA6D;
+}
+.signin{
+    font-size: 20px;
+     position: absolute;
+     margin-top: 17px;
+     margin-left: 423px;
+     text-decoration: none; 
+     border: 2px solid black;
+     border-radius: 10px; 
+     padding: 5px;
+     background-color: white;
+
+}
+</style>
+<!-- CSS End -->
+
+<body>
+
+<form id="regForm" action="" style="margin-top: 40px;">
+  <h1>Register:</h1>
+  <div class="tab">
+    <select oninput="this.className = ''" name="title">
+        <option value="select">Select</option>
+        <option value="Manufacturer">Manufacturer</option>
+        <option value="Wholeseller">Wholeseller</option>
+       </select>
+    <p><input type="text" placeholder="First name" oninput="this.className = ''" name="fname"></p>
+    <p><input type="text" placeholder="Last name" oninput="this.className = ''" name="lname"></p>
+    <p><input type="email" placeholder="Email" oninput="this.className = ''" name="Email"></p>
+    <p><input type="password" placeholder="Password" oninput="this.className = ''" name="Password"></p>
+    <p><input type="password" placeholder="Re-Enter Password" oninput="this.className = ''" name="Re-Enter Password"></p>
+    <p><input type="number" placeholder="Phone No" oninput="this.className = ''" name="Phone No"></p>
+    <p><input type="file" placeholder="Upload Use Photo" oninput="this.className = ''" name="Upload Use Photo"></p>
+  </div>
+  <div class="tab">
+    <p><input type="text" placeholder="Firm Name" oninput="this.className = ''" name="Firm Name"></p>
+    <p><input type="text" placeholder="Firm Address" oninput="this.className = ''" name="Firm Address"></p>
+    <p><input placeholder="GST" oninput="this.className = ''" name="GST"></p>
+    <p><input type="number" placeholder="Aadhar No" oninput="this.className = ''" name="Aadhar No"></p>
+    <p><input type="text" placeholder="PAN NO" oninput="this.className = ''" name="PAN NO"></p>
+  </div>
+  <div class="tab"><h4>Bank Details :</h4>
+    <select oninput="this.className = ''" name="Firm Name">
+        <option value="select Bank">Select Bank</option>
+        <option value="Bank of Baroda">Bank of Baroda</option>
+        <option value="Bank of Maharashtra">Bank of Maharashtra</option>
+        <option value="Bank of India">Bank of India</option>
+        <option value="Canara Bank">Canara Bank</option>
+        <option value="Central Bank of India">Central Bank of India</option>
+        <option value="Indian Bank">Indian Bank</option>
+        <option value="Indian Overseas Bank">Indian Overseas Bank</option>
+        <option value="Punjab and Sind Bank">Punjab and Sind Bank</option>
+        <option value="Punjab National Bank">Punjab National Bank</option>
+        <option value="State Bank of India">State Bank of India</option>
+        <option value="UCO Bank">UCO Bank</option>
+        <option value="Union Bank of India">Union Bank of India</option>
+        <option value="Axis Bank">Axis Bank</option>
+        <option value="Bandhan Bank">Bandhan Bank</option>
+        <option value="CSB Bank">CSB Bank</option>
+        <option value="City Union Bank">City Union Bank</option>
+        <option value="DCB Bank">DCB Bank</option>
+        <option value="Dhanlaxmi Bank">Dhanlaxmi Bank</option>
+        <option value="Federal Bank">Federal Bank</option>
+        <option value="HDFC Bank">HDFC Bank</option>
+        <option value="ICICI Bank">ICICI Bank</option>
+        <option value="IndusInd Bank">IndusInd Bank</option>
+        <option value="IDFC FIRST Bank">IDFC FIRST Bank</option>
+        <option value="Jammu & Kashmir Bank">Jammu & Kashmir Bank</option>
+        <option value="Karnataka Bank">Karnataka Bank</option>
+        <option value="Karur Vysya Bank">Karur Vysya Bank</option>
+        <option value="Kotak Mahindra Bank">Kotak Mahindra Bank</option>
+        <option value="IDBI Bank">IDBI Bank</option>
+        <option value="Nainital bank">Nainital bank</option>
+        <option value="RBL Bank">RBL Bank</option>
+        <option value="South Indian Bank">South Indian Bank</option>
+        <option value="Tamilnad Mercantile Bank">Tamilnad Mercantile Bank</option>
+        <option value="YES Bank">YES Bank</option>
+       </select>
+    <p><input type="number" placeholder="Account NO" oninput="this.className = ''" name="Account NO"></p>
+    <p><input type="number" placeholder="Re-Account NO" oninput="this.className = ''" name="Re-Account NO"></p>
+    <select oninput="this.className = ''" name="Select">
+        <option>Select</option>
+        <option>Saving</option>
+        <option>Current</option>
+    </select>
+    <p><input type="text" placeholder="Account Holder Name" oninput="this.className = ''" name="Account Holder Name"></p>
+    <p><input type="text" placeholder="IFCA CODE" oninput="this.className = ''" name="IFCA CODE"></p>
+    <p><input type="file" placeholder="Upload Cancel Check" oninput="this.className = ''" name="Upload Cancel Check"></p>
+  </div>
+   <div class="tab">
+    <h1>"Pay Resistration Charge Rs-100"</h1>
+    <img src="/QR.jpg" alt="">
+    <p><input type="file" placeholder="Upload Payment Screenshot"></p>
+
+  </div> 
+  <div style="overflow:auto;">
+    <div style="float:right;">
+      <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+      <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:40px;">
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+  </div>
+  <a href="/account.html" class="signin">Sign in</a>
+</form>
+
+
+
+<!-- javascriptr start -->
+<script>
+var currentTab = 0; 
+showTab(currentTab); 
+function showTab(n) {
+  
+  var x = document.getElementsByClassName("tab");
+  x[n].style.display = "block";
+  if (n == 0) {
+    document.getElementById("prevBtn").style.display = "none";
+  } else {
+    document.getElementById("prevBtn").style.display = "inline";
+  }
+  if (n == (x.length - 1)) {
+    document.getElementById("nextBtn").innerHTML = "Submit";
+  } else {
+    document.getElementById("nextBtn").innerHTML = "Next";
+  }
+  fixStepIndicator(n)
+}
+
+function nextPrev(n) {
+  var x = document.getElementsByClassName("tab");
+
+  if (n == 1 && !validateForm()) return false;
+
+  x[currentTab].style.display = "none";
+  
+  currentTab = currentTab + n;
+ 
+  if (currentTab >= x.length) {
+
+    document.getElementById("regForm").submit();
+    return false;
+  }
+
+  showTab(currentTab);
+}
+
+function validateForm() {
+  var x, y, i, valid = true;
+  x = document.getElementsByClassName("tab");
+  y = x[currentTab].getElementsByTagName("input");
+  
+  for (i = 0; i < y.length; i++) {
+    if (y[i].value == "") {
+      y[i].className += " invalid";
+      valid = false;
+    }
+  }
+ 
+  if (valid) {
+    document.getElementsByClassName("step")[currentTab].className += " finish";
+  }
+  return valid; 
+}
+
+function fixStepIndicator(n) {
+ 
+  var i, x = document.getElementsByClassName("step");
+  for (i = 0; i < x.length; i++) {
+    x[i].className = x[i].className.replace(" active", "");
+  }
+  x[n].className += " active";
+}
+</script> 
+
+<!-- javascriptr End -->
+
+</body>
+</html>
